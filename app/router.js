@@ -14,5 +14,6 @@ Router.map(function() {
   this.route('submit', function() {
     this.route('review');
   });
+  this.route('review');
 });
 export default Router;
