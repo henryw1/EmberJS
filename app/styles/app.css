@@ -1,0 +1,499 @@
+body.modal-open{
+  overflow: hidden !important;
+}
+.navbar-brand, .navbar-brand:hover{
+  color:#fff;
+}
+.form-thumb{
+
+  margin-bottom: 1px;
+  position: relative;
+
+}
+.form-thumb .card{
+    padding: 10px;
+    height: 60px;
+    width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.form-thumb span{
+  height: 60px;
+  width: 100px;
+}
+.field-control{
+  width: 100%;
+}
+.form-thumb .form-design-handler{
+  z-index: 100;
+  right: -5px;
+}
+.form-thumb em.fa-eye-slash{
+  position: center;
+  top: -5px;
+  left:0;
+}
+.form-thumb a{
+  text-decoration: none;
+}
+.form-designer-main .form-group.ui-selected{
+  /*border:groove 1px silver;*/
+  /*background-color:rgba(192, 192, 192, 0.60);*/
+
+   box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.14), 0 8px 10px 1px rgba(0, 0, 0, 0.098), 0 3px 14px 2px rgba(0, 0, 0, 0.084);
+
+}
+.form-designer-wrapper{
+    width: 50%;
+    min-width: 940px;
+    display: table;
+}
+.form-designer-row{
+  display: table-row;
+  vertical-align: top;
+}
+.form-designer-right{
+  vertical-align: top;
+  width:250px;
+  /*float: right;*/
+  padding-left: 10px;
+  display: table-cell;
+}
+.form-designer-left{
+  vertical-align: top;
+  width:250px;
+  padding-right: 10px;
+  /*float: left;*/
+  display: table-cell;
+}
+.form-designer-main{
+  vertical-align: top;
+  /*margin-left: 115px;
+  margin-right: 200px;*/
+  display: table-cell;
+}
+.is-editing .form-designer-main div.form-fields{
+  border-style: dashed;
+  border-color: silver;
+  border-width: 1px;
+  min-height:35px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin:3px;
+}
+
+.field-design-commands{
+  position: relative;
+  right: 0px;
+  float: right;
+
+  /*top: 2px;
+  bottom: -2px;*/*/
+  /*  background-color:rgba(192, 192, 192, 0.15);*/
+}
+.widget-tile-commands, .widget-html-commands{
+  position: absolute;
+  right: 20px;
+  top:45px;
+  z-index: 200;
+}
+.widget-tile-commands .btn, .widget-html-commands .btn{
+  background-color: transparent;
+}
+
+.widget-tile-commands{
+  top:5px;
+}
+
+.widget-design-commands{
+  position: relative;
+  right: 0px;
+  float: right;
+}
+.widget-design-commands .btn{
+  background-color: transparent;
+  margin-left: 3px;
+}
+.form-design-commands{
+  position: relative;
+  right: -8px;
+  top:-5px;
+  float: right;
+  z-index: 100;
+}
+.form-designer-left ul.list-group{
+  list-style: none;
+}
+.form-design-commands button{
+  margin-right: 3px;
+  background-color: transparent;
+}
+.field-design-commands button{
+  margin-right: 3px;
+  background-color: transparent;
+}
+
+.form-designer-main .form-group{
+  padding-left: 1.8em;
+}
+.form-designer-main .control-label{
+  cursor:
+}
+.form-designer-main .field-drag-handle{
+  position: absolute;
+  top:27px;
+  left:0.2em;
+  cursor: move;
+  display: none;
+
+}
+.is-editing .form-designer-main .field-drag-handle{
+  display: block;
+}
+.form-fields-wrapper{
+  padding: 0;
+}
+.uk-notify{
+  z-index: 5000;
+}
+
+.dd3-handle::before{
+  top:0;
+}
+.ui-corner-all{
+  border: solid 1px red;
+}
+
+
+.form-designer-right .panel-body{
+  padding: 0;
+}
+.is-editing #form-fields .is-selected{
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.14), 0 8px 10px 1px rgba(0, 0, 0, 0.098), 0 3px 14px 2px rgba(0, 0, 0, 0.084);
+}
+#form-fields .form-group{
+  padding-bottom: 4px;
+}
+.form-designer-main #form-fields{
+  padding-top: 10px;
+}
+.prop-label{
+  width: 44%;
+}
+.prop-control{
+  width: 55%;
+}
+#propPanel .form-group{
+  padding: 3px;
+  margin:0;
+}
+#propPanel{
+  margin-bottom: 0;
+}
+#propPanel .form-group .col-lg-9 {
+  padding-right: 0;
+}
+.tab-selected{
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.14), 0 8px 10px 1px rgba(0, 0, 0, 0.098), 0 3px 14px 2px rgba(0, 0, 0, 0.084);
+}
+.toolbox .list-group-item{
+  padding: 5px;
+}
+.toolbox .col-sm-3{
+  /*padding-left: 5px;
+  padding-right: 5px;*/
+}
+.toolbox-group{
+  margin:auto;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+.toolbox-group button{
+  border:none;
+  background-color: transparent;
+}
+
+.page-design{
+  padding-bottom: 5px;
+  height: 45px;
+}
+.portlet-handler.design {
+  cursor: move;
+}
+.color-scheme-picker{
+  width: 25px;
+border-radius: 3px;
+display: inline-block;
+border:1px dotted #ccc;
+}
+#toolbox-wraper .panel{
+  margin-bottom: 10px
+}
+#toolbox-wraper .panel-body{
+  padding: 5px
+}
+.toolbox a{
+  color: #000;
+}
+.toolbox .panel{
+  margin-bottom: 2px;
+}
+
+
+.page-widget{
+  padding-bottom:5px;
+}
+.widget-tile .panel-body{
+  padding: 0px;
+}
+.widget-list .panel-wrapper > .panel-body{
+  padding: 0px;
+}
+.widget-html .widget-refresh-btn{
+  display: none;
+}
+.widget-tile .panel-heading{
+  background-color: #fff;
+  color: #000;
+  display:none;
+}
+.widget-tile .panel-heading.design{
+  display:block;
+}
+.bg-default-dark{
+  background-color: #e5e4e4;
+}
+.modal-content{
+  max-height: 90%;
+}
+.modal-form{
+  overflow: auto;
+}
+.form-header{
+
+  padding: 5px;
+}
+.form-header .process-title{
+  /*font-size: 25px;*/
+
+}
+.condition-group-body{
+  border-right: 2px double #000;
+}
+.treeview .list-group-item {
+	cursor: pointer;
+}
+
+.treeview span.indent {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.treeview span.icon {
+	width: 12px;
+	margin-right: 5px;
+}
+
+.treeview .node-disabled {
+	color: silver;
+	cursor: not-allowed;
+}
+.condition-group-operator{
+  padding-bottom: 10px;
+}
+
+.treepicker{
+  z-index: 500;
+  margin-bottom: 50px;
+}
+.treepicker .list-group{
+  margin-bottom: 1px;
+}
+.layout-picker .col-xs-1{
+  height: 24px;
+  cursor: pointer;
+  background-color: #e5e4e4;
+}
+#toolbox-layout .layout-picker .col-xs-1{
+  padding-left: 3px;
+  padding-right: 3px;
+}
+#toolbox-layout .message{
+  display: inline-block;
+}
+.layout-picker .col-selected{
+  background-color: #2196f3;
+}
+.c-radio span{
+  margin-left: 0;
+}
+.form-field{
+  position: relative;
+  padding-right: 3px;
+}
+.form-designer-right .panel-title{
+  font-size: 14px;
+}
+
+.field-table > .panel > .table-responsive >.table > tbody > tr > td > .form-field{
+  padding-left: 4px;
+  margin-bottom: 0px;
+}
+
+.field-table > .panel > .table-responsive >.table > tbody > tr > td > .form-field .field-drag-handle{
+  display:none;
+}
+.field-table > .panel > .table-responsive >.table > tbody > tr > td > .form-field .control-label{
+  display:none;
+}
+#rulePanel .list-group-item{
+  padding: 2px;
+}
+#accordion-controls .panel-heading{
+  padding: 6px;
+}
+#accordion-properties .panel-heading{
+  padding: 6px;
+}
+.group-panel{
+  position: relative;
+}
+.group-braket{
+      /*background-image: url('images/bracket.png');
+      position: absolute;
+      right: -5px;
+      width: 27px;
+      bottom: 20px;
+      top: 10px;
+      background-size: contain;
+      background-repeat: no-repeat;*/
+}
+
+.toolbox-btn{
+  border:none;
+  text-align: left;
+}
+#rule-settings .row{
+  padding-bottom: 5px;
+
+}
+.has-error .k-widget{
+  outline-color: #f44336;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-offset: 2px;
+}
+.pf-page .btn-group .dropdown-menu{
+  top:100%;
+}
+.html-editor .fr-element{
+  display: block;
+}
+.fr-code-view .fr-element{
+  display: none;
+}
+
+
+.html-editor .fr-code{
+  display: none;
+}
+.fr-code-view .fr-code{
+  display: block;
+  min-height: 170px;
+  width: 100%;
+}
+.signup-form{
+  width: 100%;
+  max-width: 660px;
+  min-width: 320px;
+}
+#groupsTable label.radio-inline{
+  padding-left: 5px;
+}
+.setting-color > label > .icon-check {
+  opacity: 1;
+}
+#systemFields-collapse a.list-group-item:hover, #systemFields-collapse a.list-group-item:focus{
+  background-color: #0c7cd5;
+  color: #ffffff !important;
+}
+#systemFields-collapse a.list-group-item:focus{
+  background-color: inherit;
+  color: inherit; !important;
+}
+.radio-button label.radio-inline{
+  padding-left: 10px;
+}
+.form-panel.form-fields{
+  padding: 0;
+  margin: 0;
+}
+.field-panel{
+  padding: 0;
+  margin: 0;
+}
+.form-thumb.disabled{
+    background-color: #f5f7fa;
+    cursor: no-drop;
+}
+.topnavbar .navbar-header .brand-logo-collapsed{
+    padding: 15px 15px;
+}
+.designer-toolbar{
+  position:relative;
+  /*top:-70px;*/
+}
+.designer-toolbar.affix{
+  width: 240px;
+  top: 10px;
+  position: fixed !important;
+}
+.field-is-display{
+  min-height: 28px;
+}
+.form-group.field-button > .control-label{
+  display:block;
+  visibility: hidden;
+}
+.form-group.field-button > .field-drag-handle{
+  top: 10px;
+}
+.icon-slash:after{
+  position: absolute;
+  content: "/";
+  font-weight: 700;
+  font-size: 1.7em;
+  left: 7px;
+  top: -10px;
+}
+.select-datasource .list-group-item{
+  white-space: nowrap;
+}
+.field-dialog{
+  display:none;
+}
+.form-designer-main .field-dialog{
+  display:block;
+}
+.modal-body .field-drag-handle{
+  display: none;
+}
+.form-group.field-link > .field-drag-handle{
+  top: 1px;
+}
+.schuduler-month-day .month-day{
+  width: 75px;
+}
+.form-signin{
+
+  position: absolute;
+  float: none;
+  left:auto;
+  padding-left: 300px;
+  width: 900px;
+
+
+
+}

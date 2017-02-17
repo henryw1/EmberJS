@@ -1,25 +1,54 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html class="csstransforms3d">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CodeReview</title>
+    <base href="/">
+    <title>Kianda - Business Process Automation</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     {{content-for "head"}}
 
-    <link rel="stylesheet" href="{{rootURL}}assets/vendor.css">
-    <link rel="stylesheet" href="{{rootURL}}assets/code-review.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <link rel="stylesheet" href="vendor/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/css/app.css">
+    <link rel="stylesheet" href="vendor/kendo/kendo.common.min.css">
+    <link rel="stylesheet" href="vendor/kendo/kendo.bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/summernote/summernote.css" >
+
+    <link rel="stylesheet" href="vendor/bootstrapDialog/css/bootstrap-dialog.min.css">
+
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/code-review.css">
 
     {{content-for "head-footer"}}
   </head>
   <body>
     {{content-for "body"}}
 
-    <script src="{{rootURL}}assets/vendor.js"></script>
-    <script src="{{rootURL}}assets/code-review.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="vendor/kendo/kendo.ui.core.min.js"></script>
+    <script src="vendor/jQuery-Storage-API/jquery.storageapi.js"></script>
+
+    <script src="vendor/screenfull/dist/screenfull.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/bootstrapDialog/js/bootstrap-dialog.min.js"></script>
+    <script src="vendor/js/notify.js"></script>
+    <script src="vendor/summernote/summernote.js"></script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/code-review.js"></script>
     {{content-for "body-footer"}}
+
+    <div id="modaldialog">
+    </div>
+
   </body>
 </html>
