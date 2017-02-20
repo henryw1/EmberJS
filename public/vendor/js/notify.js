@@ -1,10 +1,4 @@
-/**=========================================================
- * Module: notify.js
- * Create toggleable notifications that fade out automatically.
- * Based on Notify addon from UIKit (http://getuikit.com/docs/addons_notify.html)
- * [data-toggle="notify"]
- * [data-options="options in json format" ]
- =========================================================*/
+
 
 (function($, window, document){
   'use strict';
@@ -42,7 +36,7 @@
 
       if(!message)
         $.error('Notify: No message specified');
-     
+
       $.notify(message, options || {});
   }
 
