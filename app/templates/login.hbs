@@ -1,22 +1,15 @@
-  {{#if Auth}}
-{{#link-to '/#' }}Home{{/link-to}}
 
-{{else}}
 <div class="container ">
      <form class="form-signin">
-       <h2 class="form-signin-heading">login</h2>
-       {{#if registering}}
-       <label for="name" class="sr-only">name</label>
-       {{input type ="text" class="form-control" value = name placeholder = "full Name" }}
-       {{input type ="text" class="form-control" value = username placeholder = "username" }}
-       {{/if}}
-       <!-- <label for="inputEmail">Email</label> -->
-       {{input type ="email" class="form-control" value = title placeholder = "Email Adress" }}
-       <label for="inputPassword" class="sr-only">Password</label>
-       {{input type = "password" class= "form-control" value = password placeholder = "Password"}}
-       {{#if reigistering }}
-       {{input type = "password" class= "form-control" value = Confirmpassword placeholder = "Confirm Password"}}
-       {{/if}}
+       <h2 class="form-signin-heading">Login</h2>
+<div class="form-group {{haserror}}">
+  <label class="control-label">Email address</label>
+  {{input type="email" class="form-control" value=email placeholder= "Email Adress"}}
+</div>
+<div class="form-group {{haserror}}">
+  <label class="control-label">Password</label>
+    {{input type="password" class="form-control" value=password placeholder="Password"}}
+</div>
 
        <div class="checkbox">
          <label>
@@ -24,8 +17,6 @@
          </label>
        </div>
 
-         <button {{action 'authenticate'}}class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-       <button {{action 'register'}} class = "btn btn-lg btn-success btn-block"  type="submit">Register</button>
+         <button {{action 'authenticate'}}class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
           </form>
    </div>
-   {{/if}}

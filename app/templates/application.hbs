@@ -1,19 +1,9 @@
-
+{{top-bar}}
 <!-- Main section-->
-{{#if session.isAuthenticated}}
-<section>
-  <!-- Page content-->
-  <div class="content-wrapper">
-     {{outlet}}
-  </div>
-</section>
-{{else}}
 <section style="margin-left:0;">
   <!-- Page content-->
   <div class="content-wrapper">
      {{outlet}}
   </div>
 </section>
-{{/if}}
-
 {{outlet 'modal'}}

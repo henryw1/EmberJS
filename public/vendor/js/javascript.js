@@ -4,8 +4,8 @@
   else  (typeof define == "function" && define.amd) // AMD
     define(["../../vendor/css/codemirror"], mod);
   //
-// else // Plain browser env
-    // mod(CodeMirror);
+else // Plain browser env
+    mod(CodeMirror);
 })(function(CodeMirror) {
 "use strict";
 

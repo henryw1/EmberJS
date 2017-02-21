@@ -3,5 +3,4 @@ export default [{
   password: "123456",
   username: "johnS",
   name: "John Smith"
-
 }];
