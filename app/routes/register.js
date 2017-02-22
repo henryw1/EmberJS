@@ -1,12 +1,14 @@
 import Ember from 'ember';
-import users from 'code-review/models/users';
+
 
 export default Ember.Route.extend({
   session: Ember.inject.service("session"),
-
+localdata: Ember.inject.service("localdata"),
   actions: {
     register(){
-
+      var localdata = this.get("localdata");
+      var session = this.get("session");
+      var users = localdata.retrieve("users");
       var email = this.controller.get("email");
       var name =  this.controller.get("fullname");
       var password = this.controller.get("password");
@@ -14,16 +16,17 @@ export default Ember.Route.extend({
       var newuser = {'name': name, 'email': email, 'password': password};
       var user =users.findBy('email', email);
       if (user){
-        var session = this.get("session");
+
         session.set('userExists', true);
-        alert("user exists");
+        //alert("user exists");
       }
       else{
-        alert("no user");
+        //alert("no user");
       users.addObject(newuser);
       var session = this.get("session");
       session.set('isAuthenticated', true);
       session.set('user', user);
+      localdata.update("users", users);
       this.transitionTo('submit');
     }
 

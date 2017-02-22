@@ -1,6 +1,36 @@
 <div class = "well well-sm">
-  <textarea id = "editor" class="myEditor" >
-      <!-- {{input type="text" class="myEditor" value=code}} -->
+  <label class="control-label">Code Title</label>
+  {{input type="text" class="form-control" value=codetitle placeholder= "codetitle"}}
+</div>
+
+  <div>
+  <textarea  class="myEditor">
+
   </textarea>
   </div>
- <button {{action 'submit'}}class="btn btn-lg btn-primary" type="submit">submit</button>
+  <button {{action 'submit'}}class="btn btn-lg btn-primary" type="submit" data-dismiss="modal" >submit</button>
+  <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Continue</button> -->
+
+ <div id="myModal" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <h5 class="modal-title"> Please Title your submission</h5>
+       </div>
+       <div class="modal-body">
+         <div class = "well well-sm">
+           <label class="control-label">Code Title</label>
+           {{input type="text" class="form-control" value=codetitle placeholder= "codetitle"}}
+         </div>
+       </div>
+       <div class="modal-footer">
+
+
+       </div>
+     </div>
+
+   </div>
+ </div>

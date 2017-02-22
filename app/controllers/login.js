@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import users from 'code-review/models/users';
+//import users from 'code-review/models/users';
 
 export default Ember.Controller.extend({
   Auth: false,

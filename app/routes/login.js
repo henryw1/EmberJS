@@ -1,16 +1,19 @@
 import Ember from 'ember';
-import users from 'code-review/models/users';
+
 
 export default Ember.Route.extend({
   session: Ember.inject.service("session"),
+  localdata: Ember.inject.service("localdata"),
 actions:{
   authenticate(){
+    var users = this.get("localdata").retrieve("users");
+    var session = this.get("session");
     var email = this.controller.get("email");
     var password = this.controller.get("password");
     var user =users.findBy('email', email);
     if (user && user.password === password)
     {
-      var session = this.get("session");
+
       session.set('isAuthenticated', true);
       session.set('user', user);
       this.transitionTo('submit');
