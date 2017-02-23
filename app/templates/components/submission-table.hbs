@@ -7,7 +7,7 @@
     </button> -->
     </h3>
    </div>
-<table class="table table-hover ">
+<table class="table table-hover">
     <thead>
       <tr>
         <th>Date</th>
@@ -16,12 +16,19 @@
       </tr>
     </thead>
     <tbody>
+          {{#each user.submissions as |submission|}}
       <tr>
-        <td>07/07/1972</td>
-        <td>CodeMirror</td>
-        <td>in review</td>
+          <td>{{submission.date}}</td>
+        <td>{{submission.title}}</td>
+        <td>{{submission.status}}</td>
         <td> <a  href="#"{{action 'edit'}}>Edit</a></td>
       </tr>
+      {{/each}}
     </tbody>
   </table>
+
+<div class="panel-footer">
+<button {{action 'newcode'}}class = "btn btn-primary">new submission</button>
+
+</div>
 </div>

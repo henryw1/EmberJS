@@ -7,6 +7,7 @@ export default Ember.Route.extend({
 actions:{
   authenticate(){
     var users = this.get("localdata").retrieve("users");
+    var content = this.get("localdata").retrieve("users");
     var session = this.get("session");
     var email = this.controller.get("email");
     var password = this.controller.get("password");

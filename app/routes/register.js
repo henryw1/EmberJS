@@ -9,11 +9,12 @@ localdata: Ember.inject.service("localdata"),
       var localdata = this.get("localdata");
       var session = this.get("session");
       var users = localdata.retrieve("users");
+      var content =  localdata.retrieve("[content]");
       var email = this.controller.get("email");
       var name =  this.controller.get("fullname");
       var password = this.controller.get("password");
 
-      var newuser = {'name': name, 'email': email, 'password': password};
+      var newuser = {'name': name, 'email': email, 'password': password, 'content': content };
       var user =users.findBy('email', email);
       if (user){
 
