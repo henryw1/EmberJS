@@ -14,7 +14,6 @@ didInsertElement(){
 },
   actions:{
   submit(){
-
     var date =  new Date();
     var localdata = this.get("localdata");
     var content = localdata.retrieve("content");
@@ -22,7 +21,7 @@ didInsertElement(){
   var code =  editor.doc.getValue();
   var value = {'code':code, 'date': date};
   content.addObject(value, date);
-//  localdata.update("content", content);
+localdata.update("content", content);
 
 
 // var x = this.getElementById('snackbar');
@@ -32,7 +31,5 @@ didInsertElement(){
 
   }
 }
-
-
 
 });
