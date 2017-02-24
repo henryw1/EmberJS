@@ -11,6 +11,11 @@ export default Ember.Component.extend({
       session.set('user', null);
       var controller = getOwner(this).lookup("controller:application");
       controller.transitionToRoute('index');
+      session.set('review',false);
+      session.set('code', null);
+      session.set('date', null);
+      this.set('title',"");
+
     }
   }
 });

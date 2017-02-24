@@ -23,7 +23,6 @@ localdata: Ember.inject.service("localdata"),
       else{
         //alert("no user");
       users.addObject(newuser);
-      var session = this.get("session");
       session.set('isAuthenticated', true);
       session.set('user', user);
       localdata.update("users", users);

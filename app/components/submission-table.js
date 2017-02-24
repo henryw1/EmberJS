@@ -10,16 +10,21 @@ session: Ember.inject.service("session"),
       controller.transitionToRoute('submit');
 
     },
-    edit(){
-      var session = this.get("session");
-     session.set('review', true);
-      var controller = getOwner(this).lookup("controller:application");
+
+      edit(submission){
+        console.log(submission.code)
+        debugger;
+        var session = this.get("session");
+     session.set('review',true);
+     session.set('code', submission.code);
+     session.set('title', submission.title);
+        var controller = getOwner(this).lookup("controller:application");
       controller.transitionToRoute('submit');
     }
   }
 
 
-  
+
 
   // var localdata = this.get("localdata");
   // var content = localdata.retrieve("content");
