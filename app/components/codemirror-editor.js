@@ -23,41 +23,41 @@ didInsertElement(){
   actions:{
 
           submit(){
+            // localStorage.clear();
             var users = this.get("localdata").retrieve("users");
             var email = this.get("session.user.email");
             var user = users.findBy('email', email);
+            var title = this.get("title");
+            var localdata = this.get("localdata");
+            var date =  new Date();
+            debugger;
+            var editor = this.get("editor");
+            var code = editor.doc.getValue();
               var session = this.get("session");
-            if (session.review){
-              debugger;
 
-              var oldsubmission = session.get("submission");
-              var date =  new Date();
-              var title = this.get("title");
-              var localdata = this.get("localdata");
-             var editor = this.get("editor");
-             var code = editor.doc.getValue();
-            var submission = {'code':code, 'date': date, 'title': title};
-              user.submissions.replace('oldsubmission', submission);
+                  if (session.review){
+                      debugger;
+                      user.submissions.removeObject(session.get("submission"));
+                    var submission = {'code':code, 'date': date, 'title': title};
+                    user.submissions.addObject(submission);
+                    localdata.update("users", users);
+                  //var newSub =  user.submissions.replace(submission);
+                  //  localdata.update("users", users);
 
-            }else {
-                  // var users = this.get("localdata").retrieve("users");
-                  // var email = this.get("session.user.email");
-                  // var user = users.findBy('email', email);
-                  var date =  new Date();
-                  var title = this.get("title");
-                  var localdata = this.get("localdata");
-                 var editor = this.get("editor");
-                 var code = editor.doc.getValue();
-                var submission = {'code':code, 'date': date, 'title': title};
-                if(user.submissions){
-                  }else{
-                      user.submissions = [];
-                }
-                user.submissions.addObject(submission);
-              }
+              }else {
 
-              //localdata.update("users", users);
-                },
+                      var submission = {'code':code, 'date': date, 'title': title};
+                      if(user.submissions){
+                        }else{
+                            user.submissions = [];
+                              }
+                      user.submissions.addObject(submission);
+                      localdata.update("users", users);
+                    }
+
+
+                      }
+              },
           clear(){
             var session = this.get("session");
             this.set('title', "");
@@ -65,7 +65,7 @@ didInsertElement(){
             editor.setValue(" ");
             session.set('review', false);
                 }
-        }
+        
 
 
 

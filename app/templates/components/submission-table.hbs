@@ -7,21 +7,27 @@
     </button> -->
     </h3>
    </div>
-<table class="table table-hover">
+   <div class="panel-body" style="max-height:5;overflow:scroll;">
+<table class="table table-hover" >
     <thead>
       <tr>
-        <th>Date</th>
         <th>Title</th>
+        <th>Date</th>
         <th>Status</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
           {{#each user.submissions as |submission|}}
       <tr>
-          <td>{{submission.date}}</td>
-        <td>{{submission.title}}</td>
-        <td>{{submission.status}}</td>
+              <td>{{submission.title}}</td>
+              <td>{{submission.date}}</td>
+        <td>In Review</td>
         <td> <a  href="#"{{action "edit" submission}}>Edit</a></td>
+        <td> <button {{action "dlt" submission}} class="btn btn-danger" data-toggle="modal" data-target="#myModal"> Delete </button> </td>
+   <!-- <button type="button" class="btn btn-info btn-lg"  >Continue</button> -->
+
       </tr>
       {{/each}}
     </tbody>
@@ -32,3 +38,24 @@
 
 </div>
 </div>
+</div>
+
+
+ <div id="myModal" class="modal fade" role="dialog">
+   <div class="modal-dialog">
+     <!-- Modal content-->
+       <div class="modal-content">
+          <!-- <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h5 class="modal-title"> Please Title your submission</h5>
+         </div> -->
+         <div class="modal-body">
+          <p> Are you sure you want to delete the current submission? </p>
+       </div>
+       <div class="modal-footer">
+          <button  type="button" class="btn btn-primary" data-dismiss="modal"> Yes </button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal"> No </button>
+       </div>
+   </div>
+ </div>
+ </div>
