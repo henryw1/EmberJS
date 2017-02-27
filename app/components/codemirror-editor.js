@@ -37,12 +37,14 @@ didInsertElement(){
 
                   if (session.review){
                       debugger;
-                      user.submissions.removeObject(session.get("submission"));
-                    var submission = {'code':code, 'date': date, 'title': title};
-                    user.submissions.addObject(submission);
-                    localdata.update("users", users);
-                  //var newSub =  user.submissions.replace(submission);
-                  //  localdata.update("users", users);
+                      // var oldtitle = this.get("session.submission.title")
+                      var olddate = this.get("session.submission.date");
+                      var oldsubmission= user.submissions.findBy('date', olddate);
+                      user.submissions.removeObject(oldsubmission);
+                     var submission = {'code':code, 'date': date, 'title': title};
+                     user.submissions.addObject(submission);
+                     localdata.update("users", users);
+                     
 
               }else {
 
@@ -65,7 +67,7 @@ didInsertElement(){
             editor.setValue(" ");
             session.set('review', false);
                 }
-        
+
 
 
 
