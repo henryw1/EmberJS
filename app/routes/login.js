@@ -1,11 +1,10 @@
 import Ember from 'ember';
 
 
-
 export default Ember.Route.extend({
   session: Ember.inject.service("session"),
   localdata: Ember.inject.service("localdata"),
-  // toast: Ember.inject.service(),
+
 actions:{
   authenticate(){
     var users = this.get("localdata").retrieve("users");
@@ -16,8 +15,10 @@ actions:{
     var user =users.findBy('email', email);
     if (user && user.password === password)
     {
-      // var toast = this.get('toast');
-      // toast.info('Login Succesfull');
+
+
+      //  var toast = this.get('toast');
+        toastr.success('Login Succesfull');
 
       session.set('isAuthenticated', true);
       session.set('user', user);
